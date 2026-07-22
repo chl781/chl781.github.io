@@ -1,217 +1,595 @@
-<html>
-    <head>
-        <title>Chenghui Li</title>
-        <link rel="icon" type="image/png" href="img/icon.jpg">
-		<meta name="Author" content="Chenghui Li">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<style>
-			body 
-			{ 
-    	    	font: 16px/1.5 "Palatino Linotype", Palatino, serif;
-	      	}
-	      	table{
-			    padding-left: 10%;
-			    padding-right: 10%;
-		     	border-collapse: separate;
-			}
-			td {
-				padding: 70px;
-			}
-			img.rounded-corners {
-			  border-radius: 30%;
-			}
-		</style>
-    </head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Chenghui Li">
+  <meta name="description" content="Personal website of Chenghui Li, quantitative researcher and statistics PhD.">
+  <title>Chenghui Li</title>
+  <link rel="icon" type="image/jpeg" href="img/icon.jpg">
 
-   
+  <style>
+    :root {
+      --page-bg: #f5f7fb;
+      --card-bg: #ffffff;
+      --text: #202936;
+      --muted: #657184;
+      --heading: #122033;
+      --accent: #245a92;
+      --accent-soft: #eaf2fa;
+      --border: #dfe5ec;
+      --shadow: 0 14px 38px rgba(28, 45, 66, 0.08);
+      --radius: 18px;
+    }
 
-<div>
-	
+    * {
+      box-sizing: border-box;
+    }
 
-<table>
-	<tr>
-	<td>
-	<div align="center">
-		<img src="img/ChenghuiLi.jpg" height="240" class="rounded-corners">
-		<h2>Chenghui Li (&#26446;&#31243;&#26198;)</h2><br> 
-		<h4>PhD Student</h4>
-		<h4>Statistics</h4>
-		<h4>University of Wisconsin-Madison</h4>
-		<h4>1300 University Ave</h4>
-		<h4>Madison, WI 53706</h4>
-		<h4>cli539 AT wisc.edu</h4><br>
-		Github: <a href="https://urldefense.com/v3/__https://github.com/chl781__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-sf10AEyg$">chl781</a>
-	</div>
-	</td>
+    html {
+      scroll-behavior: smooth;
+    }
 
+    body {
+      margin: 0;
+      background: var(--page-bg);
+      color: var(--text);
+      font: 17px/1.7 Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
 
-	
-	<td>
-	<div align="justify">
-		<h4>I am a quantitative researcher in Engineers Gate. I have a Statistics PhD from University of Wisconsin-Madison, advised by <a href="https://urldefense.com/v3/__https://www.nicolasgarciat.com/__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-s6kR_EIM$" target="_blank">Nicolás Gracía Trillos</a>. My thesis was about theoretical foundations and machine learning applications of graph Laplacians.  I got my master's degree in Statistics from <a href="https://www.wisc.edu/" target="_blank">University of Wisconsin-Madison</a> in 2020 and master's degree in Math from University of Wisconsin-Madison in 2025. I obtained my bachelor's degree in Math from Zhejiang University in 2019, supervised by Professor Zhiyi Tan.
-		<br><br>
-  In my academic pursuits, I am interested in exploring topology and geometric perspectives to gain a deeper understanding of complex problems. This interest further motivates my study of algorithms and their concrete mathematical formulations. Additionally, I am passionate about designing fast and interpretable algorithms for statistical problems. My academic background is a diverse blend of mathematics, statistics, and computer science.
-<!--		<br><br>
-		One of my ongoing research lines involves the calculus of variation and PDEs when dealing with the spectral manifold clustering problem. The philosophy is to find the continuum analog that can work as an ideal population-level counterpart in a geometric or calculation setting. From a mathematical view of point, this line considers the clustering and graph cut problem from a continuum limit of a random geometric graph. This perspective allows discussing the convergence rate and the nature of the algorithm, and provide strong links between learning problems and geometric problems studied in the mathematics literature. Recently, I also utilize the geometric tool to study the Neural Network in order to provide a more efficient algorithm to explain it.
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
 
-<br><br>
+    a:hover,
+    a:focus-visible {
+      color: #173f69;
+      text-decoration-thickness: 2px;
+    }
 
-My 
+    .page {
+      display: grid;
+      grid-template-columns: minmax(260px, 310px) minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
 
-<br><br>
-One my previous line of my research lay in an intersection between Optimization and Statistics. I was interested in designing algorithms that are both efficient and interpretable for statisticians. For example, one of my works is finding a coordinate-wise update method to solve Non-Negative Least Squares problems; the algorithm is both computationally efficient without any explicit dependence on  and sparse. 
-<br><br>
--->
-<!--		<br><br>
-I am also interested in learning a connection between adversarial learning and regularization. For example, we captured a series of adversarial problems connecting the Strongly contamination model and $l_2$ contamination model. In my research, we can use a PDEs method to track the solution of the adversarial optimization problem, which can capture an entire ensemble of problems. However, the problem might face divergence some time. I am also interested in developing a topological description of the collapse of PDEs.
+    .sidebar {
+      position: sticky;
+      top: 24px;
+    }
 
-<br><br> -->
+    .profile-card,
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
 
-<!--
-One line of my research involves the calculus of variation and PDEs when dealing with the spectral manifold clustering problem. The philosophy is to find the continuum analog that can work as an ideal population-level counterpart in a geometric or calculation setting. In particular, my research mainly focuses on identifying points from multiple intersecting manifolds. From a mathematical view of point, this line is based on the continuum limit of a random geometric graph, and then algorithms can be designed based on geometric intuition.
-<br><br>
-The other line of my research lies in an intersection among optimization, adversarial learning, and persistent homology, studying a change of topology phenomenon in these problems. We can use PDEs to track the solution of the adversarial optimization problem, solving an entire ensemble of problems. However, this change of parameters might lead to divergence some time, suggesting a topological change. In TDA, topological change is the basis of the method, and the collapse of features will identify significance. Further, a decay of topology appears widely in the optimization problem. For example, sparsity of solution will usually mean a change of topology. Therefore, it is essential to develop a combined description and commonness of the topological structures among these studies.
+    .profile-card {
+      padding: 28px;
+      text-align: center;
+    }
 
-		
-		My research interests include graph, machine learning and convex optimization. Currently, I am working on a general framework for manifold clustering with <a href="https://www.researchgate.net/profile/Pengfei_He14" target="_blank">Pengfei He</a> and Professor <a href="https://www.nicolasgarciat.com/" target="_blank">Nicolas Gracia Trillos</a>. Also, I am exploring a minimax problem with Professor <a href="http://www.jelena-diakonikolas.com/" target="_blank">Jelena Diakonikolas</a>. In Spring 2021, I will work as Research Assistant supervised by Professor <a href="https://jessicisewskikehe.github.io/" target="_blank">Jessi Cisewski Kehe</a>.
-		-->
-		</h4>
-	
-		<hr/>
+    .profile-photo {
+      display: block;
+      width: 174px;
+      height: 174px;
+      margin: 0 auto 20px;
+      object-fit: cover;
+      border: 5px solid #ffffff;
+      border-radius: 30%;
+      box-shadow: 0 8px 24px rgba(31, 53, 78, 0.18);
+    }
 
-		<h3>Working papers</h3>
-		<ol>
-			<li><p>N. García Trillos*, B. Hosseini*, <b>C. Li*</b>
-				<i> “Operator Learning on Grassmannian Manifold:
-					from Distribution to Eigenfunction”</i> In preparation </a></p>
-		</ol>
-		<h3>Preprints</h3>
+    .profile-name {
+      margin: 0;
+      color: var(--heading);
+      font-size: 1.72rem;
+      line-height: 1.2;
+    }
 
-		<ol>
-			<li><p><b>C. Li</b>, N. García Trillos, H. Li, L. Suchan <a href="https://urldefense.com/v3/__https://arxiv.org/abs/2507.18803__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-sHt8t_MY$">
-				<i> “Central limit theorems for the eigenvalues of graph Laplacians on data clouds”, 2025.</i> </a></p>
-			<li><p>N. García Trillos*, <b>C. Li*</b>, R. Venkatraman* <a href="https://urldefense.com/v3/__https://arxiv.org/abs/2506.00171__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-sxFe-fKE$">
-				<i> “Minimax Rates for the Estimation of Eigenpairs of Weighted Laplace-Beltrami Operators on Manifolds”, 2025.</i> </a></p>
+    .profile-role {
+      margin: 10px 0 2px;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.98rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
 
-		<li><p><b>C. Li*</b>,  AM Neuman* <a href="https://urldefense.com/v3/__https://arxiv.org/pdf/2502.04312__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-sfxf6ciY$">
-			<i> “Consistency of augmentation graph and network approximability in
-contrastive learning”, 2025.</i> </a></p>
-		  <li><p> <b>C. Li</b>, J. Cisewski-Kehe <a href="https://urldefense.com/v3/__https://arxiv.org/pdf/2410.01839__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-si4qrPu0$">
-<i> “A divide-and-conquer approach to persistent homology”, 2024.</i> </a></p>
+    .profile-affiliation {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
 
-    
+    .contact-list {
+      margin: 22px 0 0;
+      padding: 20px 0 0;
+      border-top: 1px solid var(--border);
+      list-style: none;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
 
+    .contact-list li + li {
+      margin-top: 8px;
+    }
 
-		</ol>
-		
-    
-    
-    <hr/>
+    .section-nav {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: left;
+    }
 
-		<h3>Publications</h3>
+    .section-nav h2 {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
 
-		<ol>
+    .section-nav ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-			<li><p> <b>C. Li</b>, R. Sonthalia, N. García Trillos <a href="https://urldefense.com/v3/__https://global-sci.com/index.php/jml/article/download/23508/36520__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-sOBfehsM$">
-<i> “Spectral neural networks: approximation theory
-and optimization landscape”</i> </a>Journal of Machine Learning ISSN: 2790-2048(e), 2790-203X(p), 2025.</p>
-		  
-		  <li><p>N. García Trillos*, P. He*, <b>C. Li*</b> <a href="https://urldefense.com/v3/__http://jmlr.org/papers/v24/21-1254.html__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-sOia2LR4$">
-<i> “Large sample spectral analysis of graph-based multimanifold
-clustering”</i> </a> Journal of Machine Learning Research (JMLR) 24(143):1−71, 2023.</p>
-		  
-		<li><p> J. Diakonikolas*, <b>C. Li*</b>, S. Padmanabhan*, C. Song* <a href="https://urldefense.com/v3/__https://openreview.net/pdf?id=8xccCiF9JQ6__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-s_JSknvA$">
-<i> “A Fast Scale-Invariant Algorithm
-for Non-negative Least Squares with Non-negative Data” </i> </a> Neural Information Processing Systems (NeurIPS)
-2022, 35: 6264-6277.
-<!-- 15 (8), e1006813,2019.--></p>
+    .section-nav a {
+      display: inline-block;
+      padding: 3px 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
 
-<li><p>J. Zhao, <b>C. Li</b>, F. Sala, K. Rohe <a href="https://urldefense.com/v3/__https://arxiv.org/abs/2506.13831__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-skxwqa2Q$">
-	<i> “Quantifying Structure in CLIP Embeddings: A Statistical Framework for Concept Interpretation”</i>  </a> Transactions on Machine Learning Research 2026. </p>
+    main {
+      min-width: 0;
+    }
 
+    .content-card {
+      padding: clamp(24px, 4vw, 42px);
+    }
 
-<hr/>
-</ol>
+    .content-card + .content-card {
+      margin-top: 24px;
+    }
 
-<h3>Workshops</h3>
+    section {
+      scroll-margin-top: 24px;
+    }
 
-		<ol>
-    
-    <li><p> <b>C. Li</b>,  R. Sonthalia, N. García Trillos, <a href="https://urldefense.com/v3/__https://openreview.net/pdf?id=A7K9Qcg34I__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-sFiF8uCs$">
-<i> “The optimization landscape of Spectral neural network”</i> </a>  ICML 2024 workshop: High-dimensional Learning Dynamics.</p>
+    .eyebrow {
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
 
-<li><p> AM Neuman, <b>C. Li</b> <a href="https://urldefense.com/v3/__https://openreview.net/forum?id=RURFNeX4mu__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-sXGUXsxU$">
-<i> “Consistency of augmentation graph and network approximability in contrastive learning”</i> </a>  15th International Conference on Sampling Theory and Applications 2025.</p>
+    h2 {
+      margin: 0 0 22px;
+      color: var(--heading);
+      font-size: clamp(1.55rem, 3vw, 2rem);
+      line-height: 1.25;
+    }
 
-    
-    <hr/>
+    h3 {
+      margin: 0;
+      color: var(--heading);
+      font-size: 1.35rem;
+      line-height: 1.3;
+    }
 
+    p {
+      margin: 0;
+    }
 
-		</ol>
-    
-    
-    
-<!--    
-    <h3>Research Experience</h3>
-    <ul>
-    <li><p>Lagrangian Flux Calculation: <a href="files/fluxidentityPre.pdf" target="_blue">Slide</a>, <a href="files/fluxIdentity.pdf" target="_blue">Paper</a>. Supervised by Professor <a href="https://person.zju.edu.cn/en/qinghai#902245" target="_blank">Qinghai Zhang</a></p></li>
-		
-		</ul>
-		<hr/>
--->	
-		
-		<h3>Teaching</h3>
-		<ul>
-		  <li><p>Spring 2024 [TA]: STAT 301 Introduction To Statistical Methods</p></li>
-		  <li><p>Fall 2023 [TA]: STAT 609 Mathematical Statistics I</p></li>
-		  <li><p>Spring 2023 [TA]: STAT 324 Introductory Applied Statistics for Engineers</p></li>
-		  <li><p>Fall 2022 [TA]: STAT 371 Introductory Applied Statistics for the Life Sciences</p></li>
-		<li><p> <!-- <a href="dis/index-fall2020.html" target="_blue">  Fall 2020</a>--> Fall 2020 [TA]: STAT 301 Introduction To Statistical Methods</p></li>
-		<li><p>Spring 2020 [Grader]: MATH 629 Introduction To Measure And Integration</p></li>
-		</ul>
+    p + p {
+      margin-top: 1em;
+    }
 
-<hr/>
-    
-    
-    <h3>Talks</h3>
-    <ul>
-	<li><p> AMS sectional meeting: Geometric variational problems and applications, Saint Louis, Oct. 2025 </p></li>
-	<li><p> Institute for Foundation of Data Science seminar, University of Wisconsin-Madison, Apr. 2025 </p></li>
-      <li><p> Institute for Foundation of Data Science seminar, University of Wisconsin-Madison, Nov. 2024 </p></li>
-	<li><p> Poster at DeepMath 2024, Philadelphia, Nov. 2024 </p></li>  
-    <li><p> Poster presentation and online talk at Neurips2023, New Orleans, Dec. 2023 </p></li> 
-    <li><p> Institute for Foundation of Data Science seminar, University of Wisconsin-Madison, Nov. 2023 </p></li>
-    <li><p> Graph-based Techniques in Machine Learning minisymposium, Michigan State University, Oct. 2023 </p></li>
-    <li><p> Geometry and topology seminar at Max Planck Institute for Mathematics, Leipzig Germany, June 2023 </p></li>
-    <li><p> SIAM Conference on geometric and topological techniques in machine learning minisymposium, Utah State University, April 2023 </p></li>
-    <li><p>Poster presentation and online talk at Neurips2022, New Orleans, Sep. 2022 </p></li>
-    <li><p>Fall Workshop on Computational Geometry, Oct. 2021  </p></li>
-		<li><p>Second Graduate Student Conference: Geometry and Topology meet Data Analysis and Machine Learning, July 2021  </p></li>
-		</ul>
-		<hr/>
+    .intro {
+      font-size: 1.05rem;
+      text-align: left;
+    }
 
-		<h3>Service</h3>
-		<ul>
-		  <li><p>  Participated as a researcher and assistant at the <a href="https://urldefense.com/v3/__https://www.ams.org/programs/research-communities/2022MRC-DataSci__;!!Mak6IKo!PYBWFNJb4H9kacATXkP6vrdw4C0e4w5oUWl6gvP7PFjjAl9PmT8Ln3WgcUPCHM7RDZ-sKjFdNH8$" target="_blue"> 2022 AMS Mathematics Research Community: Data Science at the Crossroads of Analysis, Geometry, and Topology</a>:  May 2022  </p></li>
-		  <li><p></p>Served as a reviewer for ICML and the Journal of Machine Learning Research (JMLR).</p></li>
-		</ul>
-	<!--
-		<h3>Blog</h3>
-   <ul>
-		<li><p><a href="blog/VSP.html" target="_blue">VSP on Citation data</a> </p></li>
-		</ul>
-    -->
-    <hr/>
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
 
-	</div>
-	</td>		
-	</tr>  
-</table>
-   
-	
-</div>
-	
-		
+    .section-heading::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .publication-list,
+    .standard-list {
+      margin: 0;
+      padding-left: 1.45rem;
+    }
+
+    .publication-list li,
+    .standard-list li {
+      padding-left: 0.3rem;
+    }
+
+    .publication-list li + li,
+    .standard-list li + li {
+      margin-top: 17px;
+    }
+
+    .publication-list li::marker {
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+    }
+
+    .paper-title {
+      font-style: italic;
+    }
+
+    .venue {
+      color: var(--muted);
+    }
+
+    .standard-list p {
+      display: inline;
+    }
+
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    @media (max-width: 880px) {
+      .page {
+        grid-template-columns: 1fr;
+        width: min(760px, calc(100% - 32px));
+        padding-top: 24px;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .profile-card {
+        display: grid;
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 0 24px;
+        align-items: center;
+        text-align: left;
+      }
+
+      .profile-photo {
+        grid-row: 1 / span 4;
+        width: 145px;
+        height: 145px;
+        margin: 0;
+      }
+
+      .contact-list {
+        margin-top: 16px;
+        padding-top: 14px;
+      }
+
+      .section-nav {
+        grid-column: 1 / -1;
+      }
+
+      .section-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+
+      .page {
+        width: min(100% - 20px, 760px);
+        padding: 10px 0 36px;
+      }
+
+      .profile-card {
+        display: block;
+        padding: 24px 20px;
+        text-align: center;
+      }
+
+      .profile-photo {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 18px;
+      }
+
+      .section-nav {
+        text-align: left;
+      }
+
+      .section-nav ul {
+        justify-content: center;
+      }
+
+      .content-card {
+        padding: 24px 20px;
+        border-radius: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        display: block;
+        width: 100%;
+        padding: 0;
+      }
+
+      .sidebar {
+        position: static;
+        margin-bottom: 20px;
+      }
+
+      .profile-card,
+      .content-card {
+        box-shadow: none;
+      }
+
+      .section-nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page" id="top">
+    <aside class="sidebar" aria-label="Profile and page navigation">
+      <div class="profile-card">
+        <img
+          class="profile-photo"
+          src="img/ChenghuiLi.jpg"
+          alt="Portrait of Chenghui Li"
+          width="174"
+          height="174"
+        >
+
+        <div>
+          <h1 class="profile-name">Chenghui Li (&#26446;&#31243;&#26198;)</h1>
+          <p class="profile-role">Quantitative Researcher</p>
+          <p class="profile-affiliation">
+            PhD in Statistics<br>
+            University of Wisconsin-Madison
+          </p>
+        </div>
+
+        <ul class="contact-list" aria-label="Contact information">
+          <li>1300 University Ave<br>Madison, WI 53706</li>
+          <li>cli539 AT wisc.edu</li>
+          <li>GitHub: <a href="https://urldefense.com/v3/__https://github.com/chl781__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7Ee_KBaGpM$" target="_blank" rel="noopener noreferrer">chl781</a></li>
+        </ul>
+
+        <nav class="section-nav" aria-label="Page sections">
+          <h2>On this page</h2>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#working-papers">Working papers</a></li>
+            <li><a href="#preprints">Preprints</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#workshops">Workshops</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#talks">Talks</a></li>
+            <li><a href="#service">Service</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <main>
+      <section class="content-card intro" id="about">
+        <p class="eyebrow">About</p>
+        <h2>Research profile</h2>
+        <p>
+          I am a quantitative researcher at Engineers Gate. I have a Statistics PhD from the
+          University of Wisconsin-Madison, advised by
+          <a href="https://urldefense.com/v3/__https://www.nicolasgarciat.com/__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7Ee314Zi4M$" target="_blank" rel="noopener noreferrer">Nicol&aacute;s Garc&iacute;a Trillos</a>.
+          My thesis was about theoretical foundations and machine learning applications of graph Laplacians.
+          I received my master's degree in Statistics from the
+          <a href="https://www.wisc.edu/" target="_blank" rel="noopener noreferrer">University of Wisconsin-Madison</a>
+          in 2020 and my master's degree in Mathematics from the University of Wisconsin-Madison in 2025.
+          I obtained my bachelor's degree in Mathematics from Zhejiang University in 2019, supervised by
+          Professor Zhiyi Tan.
+        </p>
+        <p>
+          In my academic pursuits, I am interested in exploring topology and geometric perspectives to gain a
+          deeper understanding of complex problems. This interest further motivates my study of algorithms and
+          their concrete mathematical formulations. Additionally, I am passionate about designing fast and
+          interpretable algorithms for statistical problems. My academic background is a diverse blend of
+          mathematics, statistics, and computer science.
+        </p>
+      </section>
+
+      <section class="content-card" id="working-papers">
+        <div class="section-heading">
+          <h3>Working papers</h3>
+        </div>
+        <ol class="publication-list">
+          <li>
+            N. Garc&iacute;a Trillos*, B. Hosseini*, <strong>C. Li*</strong>.
+            <span class="paper-title">&ldquo;Operator Learning on Grassmannian Manifold: from Distribution to Eigenfunction.&rdquo;</span>
+            <span class="venue">In preparation.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="content-card" id="preprints">
+        <div class="section-heading">
+          <h3>Preprints</h3>
+        </div>
+        <ol class="publication-list">
+          <li>
+            <strong>C. Li</strong>, N. Garc&iacute;a Trillos, H. Li, L. Suchan.
+            <a class="paper-title" href="https://urldefense.com/v3/__https://arxiv.org/abs/2507.18803__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7Eem6rj9MI$" target="_blank" rel="noopener noreferrer">&ldquo;Central limit theorems for the eigenvalues of graph Laplacians on data clouds.&rdquo;</a>
+            <span class="venue">2025.</span>
+          </li>
+          <li>
+            N. Garc&iacute;a Trillos*, <strong>C. Li*</strong>, R. Venkatraman*.
+            <a class="paper-title" href="https://urldefense.com/v3/__https://arxiv.org/abs/2506.00171__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7EedmlRb-4$" target="_blank" rel="noopener noreferrer">&ldquo;Minimax Rates for the Estimation of Eigenpairs of Weighted Laplace-Beltrami Operators on Manifolds.&rdquo;</a>
+            <span class="venue">2025.</span>
+          </li>
+          <li>
+            <strong>C. Li*</strong>, A. M. Neuman*.
+            <a class="paper-title" href="https://urldefense.com/v3/__https://arxiv.org/pdf/2502.04312__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7Ee1g8hdyM$" target="_blank" rel="noopener noreferrer">&ldquo;Consistency of augmentation graph and network approximability in contrastive learning.&rdquo;</a>
+            <span class="venue">2025.</span>
+          </li>
+          <li>
+            <strong>C. Li</strong>, J. Cisewski-Kehe.
+            <a class="paper-title" href="https://urldefense.com/v3/__https://arxiv.org/pdf/2410.01839__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7EeOuq191I$" target="_blank" rel="noopener noreferrer">&ldquo;A divide-and-conquer approach to persistent homology.&rdquo;</a>
+            <span class="venue">2024.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="content-card" id="publications">
+        <div class="section-heading">
+          <h3>Publications</h3>
+        </div>
+        <ol class="publication-list">
+          <li>
+            <strong>C. Li</strong>, R. Sonthalia, N. Garc&iacute;a Trillos.
+            <a class="paper-title" href="https://urldefense.com/v3/__https://global-sci.com/index.php/jml/article/download/23508/36520__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7EeQILBigs$" target="_blank" rel="noopener noreferrer">&ldquo;Spectral neural networks: approximation theory and optimization landscape.&rdquo;</a>
+            <span class="venue">Journal of Machine Learning, ISSN 2790-2048(e), 2790-203X(p), 2025.</span>
+          </li>
+          <li>
+            N. Garc&iacute;a Trillos*, P. He*, <strong>C. Li*</strong>.
+            <a class="paper-title" href="https://urldefense.com/v3/__https://jmlr.org/papers/v24/21-1254.html__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7Ee1KqSKAo$" target="_blank" rel="noopener noreferrer">&ldquo;Large sample spectral analysis of graph-based multimanifold clustering.&rdquo;</a>
+            <span class="venue">Journal of Machine Learning Research (JMLR), 24(143):1&ndash;71, 2023.</span>
+          </li>
+          <li>
+            J. Diakonikolas*, <strong>C. Li*</strong>, S. Padmanabhan*, C. Song*.
+            <a class="paper-title" href="https://urldefense.com/v3/__https://openreview.net/pdf?id=8xccCiF9JQ6__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7EeSsgS63E$" target="_blank" rel="noopener noreferrer">&ldquo;A Fast Scale-Invariant Algorithm for Non-negative Least Squares with Non-negative Data.&rdquo;</a>
+            <span class="venue">Neural Information Processing Systems (NeurIPS), 35:6264&ndash;6277, 2022.</span>
+          </li>
+          <li>
+            J. Zhao, <strong>C. Li</strong>, F. Sala, K. Rohe.
+            <a class="paper-title" href="https://urldefense.com/v3/__https://arxiv.org/abs/2506.13831__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7EeLq7gQjw$" target="_blank" rel="noopener noreferrer">&ldquo;Quantifying Structure in CLIP Embeddings: A Statistical Framework for Concept Interpretation.&rdquo;</a>
+            <span class="venue">Transactions on Machine Learning Research, 2026.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="content-card" id="workshops">
+        <div class="section-heading">
+          <h3>Workshops</h3>
+        </div>
+        <ol class="publication-list">
+          <li>
+            <strong>C. Li</strong>, R. Sonthalia, N. Garc&iacute;a Trillos.
+            <a class="paper-title" href="https://urldefense.com/v3/__https://openreview.net/pdf?id=A7K9Qcg34I__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7EelFQLor4$" target="_blank" rel="noopener noreferrer">&ldquo;The optimization landscape of Spectral neural network.&rdquo;</a>
+            <span class="venue">ICML 2024 Workshop: High-dimensional Learning Dynamics.</span>
+          </li>
+          <li>
+            A. M. Neuman, <strong>C. Li</strong>.
+            <a class="paper-title" href="https://urldefense.com/v3/__https://openreview.net/forum?id=RURFNeX4mu__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7EeT2fW3PQ$" target="_blank" rel="noopener noreferrer">&ldquo;Consistency of augmentation graph and network approximability in contrastive learning.&rdquo;</a>
+            <span class="venue">15th International Conference on Sampling Theory and Applications, 2025.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="content-card" id="teaching">
+        <div class="section-heading">
+          <h3>Teaching</h3>
+        </div>
+        <ul class="standard-list">
+          <li><p>Spring 2024 [TA]: STAT 301 Introduction to Statistical Methods</p></li>
+          <li><p>Fall 2023 [TA]: STAT 609 Mathematical Statistics I</p></li>
+          <li><p>Spring 2023 [TA]: STAT 324 Introductory Applied Statistics for Engineers</p></li>
+          <li><p>Fall 2022 [TA]: STAT 371 Introductory Applied Statistics for the Life Sciences</p></li>
+          <li><p>Fall 2020 [TA]: STAT 301 Introduction to Statistical Methods</p></li>
+          <li><p>Spring 2020 [Grader]: MATH 629 Introduction to Measure and Integration</p></li>
+        </ul>
+      </section>
+
+      <section class="content-card" id="talks">
+        <div class="section-heading">
+          <h3>Talks</h3>
+        </div>
+        <ul class="standard-list">
+          <li><p>AMS sectional meeting: Geometric variational problems and applications, Saint Louis, Oct. 2025</p></li>
+          <li><p>Institute for Foundation of Data Science seminar, University of Wisconsin-Madison, Apr. 2025</p></li>
+          <li><p>Institute for Foundation of Data Science seminar, University of Wisconsin-Madison, Nov. 2024</p></li>
+          <li><p>Poster at DeepMath 2024, Philadelphia, Nov. 2024</p></li>
+          <li><p>Poster presentation and online talk at NeurIPS 2023, New Orleans, Dec. 2023</p></li>
+          <li><p>Institute for Foundation of Data Science seminar, University of Wisconsin-Madison, Nov. 2023</p></li>
+          <li><p>Graph-based Techniques in Machine Learning minisymposium, Michigan State University, Oct. 2023</p></li>
+          <li><p>Geometry and topology seminar at Max Planck Institute for Mathematics, Leipzig, Germany, June 2023</p></li>
+          <li><p>SIAM Conference on geometric and topological techniques in machine learning minisymposium, Utah State University, Apr. 2023</p></li>
+          <li><p>Poster presentation and online talk at NeurIPS 2022, New Orleans, Sep. 2022</p></li>
+          <li><p>Fall Workshop on Computational Geometry, Oct. 2021</p></li>
+          <li><p>Second Graduate Student Conference: Geometry and Topology Meet Data Analysis and Machine Learning, July 2021</p></li>
+        </ul>
+      </section>
+
+      <section class="content-card" id="service">
+        <div class="section-heading">
+          <h3>Service</h3>
+        </div>
+        <ul class="standard-list">
+          <li>
+            <p>
+              Participated as a researcher and assistant at the
+              <a href="https://urldefense.com/v3/__https://www.ams.org/programs/research-communities/2022MRC-DataSci__;!!Mak6IKo!Nkq-u73r93baFkDJtrE6jZ6HrkNN6O3zyjrcoYL1KX52eF4W3jJGBDNonFOyQzj_A7Ee35kyPP4$" target="_blank" rel="noopener noreferrer">2022 AMS Mathematics Research Community: Data Science at the Crossroads of Analysis, Geometry, and Topology</a>,
+              May 2022.
+            </p>
+          </li>
+          <li><p>Served as a reviewer for ICML and the Journal of Machine Learning Research (JMLR).</p></li>
+        </ul>
+      </section>
+
+      <footer>
+        <a href="#top">Back to top</a>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
-
